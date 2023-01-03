@@ -368,6 +368,9 @@ set(vtk_include_dirs)
 vtk_module_find_package(
   PACKAGE Threads)
 
+set(CMAKE_USE_PTHREADS_INIT 0)
+set(CMAKE_USE_WIN32_THREADS_INIT 1)
+
 set(VTK_MAX_THREADS "64" CACHE STRING
   "Max number of threads vtkMultiThreader will allocate.")
 mark_as_advanced(VTK_MAX_THREADS)
